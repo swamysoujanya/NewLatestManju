@@ -1,0 +1,502 @@
+Data Time:22/12/2015 21:33:08
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:27/12/2015 11:12:45
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnCreate
+Error Line No.:72
+Form Name:frmMainForm
+Data Time:27/12/2015 11:27:45
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:28/12/2015 11:17:05
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnCreate
+Error Line No.:74
+Form Name:frmMainForm
+Data Time:28/12/2015 11:17:09
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnCreate
+Error Line No.:74
+Form Name:frmMainForm
+Data Time:28/12/2015 21:08:22
+Exception Name:#23000Duplicate entry 'INV00001' for key 'PRIMARY'
+Error Line No.:1048
+Form Name:Invoice DB layer
+Data Time:30/12/2015 12:51:30
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:30/12/2015 12:53:50
+Exception Name:#23000Duplicate entry 'INV00003' for key 'PRIMARY'
+Error Line No.:1048
+Form Name:Invoice DB layer
+Data Time:30/12/2015 13:09:11
+Exception Name:#23000Duplicate entry 'INV00003' for key 'PRIMARY'
+Error Line No.:1048
+Form Name:Invoice DB layer
+Data Time:30/12/2015 13:09:19
+Exception Name:#23000Duplicate entry 'INV00003' for key 'PRIMARY'
+Error Line No.:1048
+Form Name:Invoice DB layer
+Data Time:30/12/2015 13:12:11
+Exception Name:#23000Duplicate entry 'INV00003' for key 'PRIMARY'
+Error Line No.:1048
+Form Name:Invoice DB layer
+Data Time:30/12/2015 14:25:07
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:30/12/2015 14:30:27
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:30/12/2015 14:31:14
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:30/12/2015 16:13:36
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnUpdate
+Error Line No.:651
+Form Name:frmMainForm
+Data Time:30/12/2015 17:19:57
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:19:59
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:20:02
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:22:00
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:22:36
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:24:07
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:31:13
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Error Line No.:473
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:31:17
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Error Line No.:473
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:32:27
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Error Line No.:444
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:32:32
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:32:35
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:34:17
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Error Line No.:473
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:35:46
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Error Line No.:444
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:37:42
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 17:39:06
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 21:43:47
+Exception Name:#42000You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and InvOrRepair = 'I' and  InvID > 'INV00006'' at line 1
+Error Line No.:1016
+Form Name:Invoice DB layer
+Data Time:30/12/2015 21:57:08
+Exception Name:Index and length must refer to a location within the string.
+Parameter name: length
+Error Line No.:1066
+Form Name:Invoice DB layer
+Data Time:30/12/2015 21:57:44
+Exception Name:Index and length must refer to a location within the string.
+Parameter name: length
+Error Line No.:1066
+Form Name:Invoice DB layer
+Data Time:30/12/2015 22:34:06
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 22:34:38
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 22:34:45
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 22:34:55
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 22:35:42
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 22:37:18
+Exception Name:Column named ID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:287
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 22:49:57
+Exception Name:Column named ID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:277
+Form Name:frmCustomerAccounts
+Data Time:30/12/2015 23:07:43
+Exception Name:Column named CuSuID cannot be found.
+Parameter name: columnName
+Event Name:System.Windows.Forms.DataGridViewCellEventArgs
+Control Name:dataCustAcc
+Error Line No.:277
+Form Name:frmCustomerAccounts
+Data Time:31/12/2015 14:57:46
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:31/12/2015 15:07:00
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:31/12/2015 15:08:07
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:31/12/2015 15:35:12
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnContinuePrint
+Error Line No.:28
+Form Name:FormNumberOfPrints
+Data Time:31/12/2015 15:35:40
+Exception Name:Input string was not in a correct format.
+Error Line No.:555
+Form Name:frmCustomerAccounts
+Data Time:31/12/2015 15:36:09
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnContinuePrint
+Error Line No.:28
+Form Name:FormNumberOfPrints
+Data Time:31/12/2015 15:36:12
+Exception Name:Input string was not in a correct format.
+Error Line No.:555
+Form Name:frmCustomerAccounts
+Data Time:31/12/2015 15:42:36
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:31/12/2015 23:00:22
+Exception Name:Object reference not set to an instance of an object.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:1033
+Form Name:frmInvoice
+Data Time:03/01/2016 13:14:25
+Exception Name:startIndex cannot be larger than length of string.
+Parameter name: startIndex
+Error Line No.:1112
+Form Name:Invoice DB layer
+Data Time:03/01/2016 14:08:16
+Exception Name:#HY000Incorrect integer value: '' for column 'InvSupID' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:03/01/2016 14:11:15
+Exception Name:#22007Incorrect datetime value: '03/01/2016 14:10:47' for column 'InvDateTime' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:03/01/2016 14:14:59
+Exception Name:#22007Incorrect datetime value: '03/01/2016 14:10:47' for column 'InvDateTime' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:03/01/2016 14:59:30
+Exception Name:String was not recognized as a valid DateTime.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button1
+Error Line No.:833
+Form Name:frmInvoice
+Data Time:03/01/2016 14:59:38
+Exception Name:String was not recognized as a valid DateTime.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button1
+Error Line No.:833
+Form Name:frmInvoice
+Data Time:03/01/2016 14:59:54
+Exception Name:String was not recognized as a valid DateTime.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button1
+Error Line No.:833
+Form Name:frmInvoice
+Data Time:03/01/2016 15:02:39
+Exception Name:String was not recognized as a valid DateTime.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button1
+Error Line No.:834
+Form Name:frmInvoice
+Data Time:03/01/2016 16:13:05
+Exception Name:#22007Incorrect datetime value: '03/01/2016 04:12:04' for column 'InvDateTime' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:03/01/2016 16:22:28
+Exception Name:Cannot interpret token ';' at position 14.
+Error Line No.:58
+Form Name:Invoice DB layer
+Data Time:03/01/2016 16:22:28
+Exception Name:Object reference not set to an instance of an object.
+Error Line No.:67
+Form Name:Invoice DB layer
+Data Time:03/01/2016 16:32:16
+Exception Name:#22007Incorrect datetime value: '03/01/2016 04:32:13 PM' for column 'InvDateTime' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:03/01/2016 16:40:57
+Exception Name:#22007Incorrect datetime value: '03/01/2016 16:40:52' for column 'InvDateTime' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:03/01/2016 16:43:03
+Exception Name:#22007Incorrect datetime value: '03/01/2016 16:42:53' for column 'InvDateTime' at row 1
+Error Line No.:181
+Form Name:Invoice DB layer
+Data Time:04/01/2016 21:00:01
+Exception Name:Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:968
+Form Name:frmInvoice
+Data Time:04/01/2016 21:00:05
+Exception Name:Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:968
+Form Name:frmInvoice
+Data Time:04/01/2016 21:00:09
+Exception Name:Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:968
+Form Name:frmInvoice
+Data Time:04/01/2016 21:00:13
+Exception Name:Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:button2
+Error Line No.:968
+Form Name:frmInvoice
+Data Time:04/01/2016 21:07:14
+Exception Name:#23000Duplicate entry '00000015' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer
+Data Time:06/01/2016 14:53:47
+Exception Name:#23000Duplicate entry '00000033' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer
+Data Time:06/01/2016 14:54:08
+Exception Name:#23000Duplicate entry '00000033' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer
+Data Time:06/01/2016 14:55:05
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 14:56:23
+Exception Name:#23000Duplicate entry '00000033' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:06:04
+Exception Name:#23000Duplicate entry '00000033' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:06:58
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:09:00
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnInvAdd
+Error Line No.:1371
+Form Name:frmInvoice
+Data Time:06/01/2016 15:17:12
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:51:48
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnInvAdd
+Error Line No.:1371
+Form Name:frmInvoice
+Data Time:06/01/2016 15:52:23
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:52:35
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:54:45
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnInvAdd
+Error Line No.:1371
+Form Name:frmInvoice
+Data Time:06/01/2016 15:55:27
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:55:58
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:56:09
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 15:56:14
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 16:05:17
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 16:05:31
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 16:05:36
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 16:14:41
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnInvAdd
+Error Line No.:1371
+Form Name:frmInvoice
+Data Time:06/01/2016 16:16:26
+Exception Name:Input string was not in a correct format.
+Event Name:System.Windows.Forms.MouseEventArgs
+Control Name:btnInvAdd
+Error Line No.:1371
+Form Name:frmInvoice
+Data Time:06/01/2016 16:17:06
+Exception Name:Input string was not in a correct format.
+Error Line No.:145
+Form Name:Invoice DB layer
+Data Time:06/01/2016 16:20:55
+Exception Name:#23000Duplicate entry '00000033' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer
+Data Time:08/01/2016 22:33:07
+Exception Name:Object reference not set to an instance of an object.
+Error Line No.:53
+Form Name:frmLedgerReprot
+Data Time:15/01/2016 09:16:55
+Exception Name:#23000Duplicate entry '00000033' for key 'PRIMARY'
+Error Line No.:121
+Form Name:Invoice DB layer

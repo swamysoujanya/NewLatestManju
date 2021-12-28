@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BarcodeRender</name>
+    </assembly>
+    <members>
+        <member name="T:BarcodeRender.BarcodePanel">
+            <summary>
+            <c>BarcodePanel</c> encapsulates a Windows Forms barcode control.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.BarcodePanel.#ctor">
+            <summary>
+            Initialises an instance of <see cref="T:BarcodePanel" />.
+            </summary>
+        </member>
+        <member name="P:BarcodeRender.BarcodePanel.Symbology">
+            <summary>
+            Gets or sets the barcode symbology.
+            </summary>
+            <value>The symbology.</value>
+        </member>
+        <member name="P:BarcodeRender.BarcodePanel.Text">
+            <summary>
+            Gets or sets the text associated with this control.
+            </summary>
+            <value></value>
+            <returns>The text associated with this control.</returns>
+        </member>
+        <member name="P:BarcodeRender.BarcodePanel.MaxBarHeight">
+            <summary>
+            Gets or sets the maximum height of the rendered barcode.
+            </summary>
+            <value>The maximum height of a barcode bar in pixels.</value>
+        </member>
+        <member name="F:BarcodeRender.BarcodePanel.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.BarcodePanel.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BarcodeRender.BarcodePanel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BarcodeRender.BarcodeTestForm">
+            <summary>
+            <c>BarcodeTestForm</c> is designed to support the printing and
+            subsequent testing (by using a barcode scanner) to validate the
+            barcode algorithms used in the rendering suite.
+            </summary>
+        </member>
+        <member name="T:BarcodeRender.BarcodeTestForm.BiIterator`2">
+            <summary>
+            <c>BiIterator</c> implements a bi-directional iterator capable of
+            iterating forwards or backwards across any IList derived collection.
+            </summary>
+            <typeparam name="TElement"></typeparam>
+            <typeparam name="TList"></typeparam>
+        </member>
+        <member name="M:BarcodeRender.BarcodeTestForm.#ctor">
+            <summary>
+            Initialises a new instance of <see cref="T:BarcodeTestForm"/> class.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.BarcodeTestForm.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Form.Closing"></see> event.
+            </summary>
+            <param name="e">A <see cref="T:System.ComponentModel.CancelEventArgs"></see> that contains the event data.</param>
+        </member>
+        <member name="M:BarcodeRender.BarcodeTestForm.GenerateRandomTestCases(Zen.Barcode.BarcodeSymbology)">
+            <summary>
+            Prepares the form for printing and testing of the symbology.
+            </summary>
+            <param name="symbology">Zero-based symbology index.</param>
+        </member>
+        <member name="M:BarcodeRender.BarcodeTestForm.SaveModified">
+            <summary>
+            Queries the user to save the current document if it has been
+            modified.
+            </summary>
+            <returns>
+            <c>true</c> if operation being performed by the caller can 
+            continue; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="F:BarcodeRender.BarcodeTestForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.BarcodeTestForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BarcodeRender.BarcodeTestForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BarcodeRender.BarcodeData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BarcodeRender.BarCodeDataList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BarcodeRender.ExportBarcodeImagesForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.ExportBarcodeImagesForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BarcodeRender.ExportBarcodeImagesForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:BarcodeRender.ExportProgress.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.ExportProgress.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BarcodeRender.ExportProgress.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:BarcodeRender.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BarcodeRender.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BarcodeRender.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:BarcodeRender.ExportProgressHandler">
+            <summary>
+            Notification delegate called during image export.
+            </summary>
+            <param name="current"></param>
+            <param name="total"></param>
+            <param name="operation"></param>
+            <param name="detail"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BarcodeRender.SymbologyTestPlan">
+            <summary>
+            <c>SymbologyTestPlan</c> encapsulates a barcode test-plan
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestPlan.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestPlan"/> class.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestPlan.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestPlan"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestPlan.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestPlan.GroupTests">
+            <summary>
+            Gets the group tests.
+            </summary>
+            <value>The group tests.</value>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestPlan.AddTestCase(Zen.Barcode.BarcodeSymbology,System.String)">
+            <summary>
+            Adds the test case.
+            </summary>
+            <param name="symbology">The symbology.</param>
+            <param name="text">The text.</param>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestPlan.GetTestCases(System.Int32)">
+            <summary>
+            Gets the test cases.
+            </summary>
+            <param name="maxBarHeight">Height of the max bar.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestPlan.ExportImages(System.String,System.Boolean,System.Boolean,System.Int32,BarcodeRender.ExportProgressHandler)">
+            <summary>
+            Exports the barcode images.
+            </summary>
+            <param name="folder">The root folder for export.</param>
+            <param name="overwriteFiles">if set to <c>true</c> [overwrite files].</param>
+            <param name="flattenHierarchy">if set to <c>true</c> [flatten hierarchy].</param>
+            <param name="maxBarHeight">Height of the max bar.</param>
+        </member>
+        <member name="T:BarcodeRender.SymbologyTestCase">
+            <summary>
+            <c>SymbologyTestCase</c> encapsulates an individual test case.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestCase.#ctor(Zen.Barcode.BarcodeSymbology,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestCase"/> class.
+            </summary>
+            <param name="symbology">The symbology.</param>
+            <param name="barcodeText">The barcode text.</param>
+            <param name="maxBarHeight">Height of the max bar.</param>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestCase.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:BarcodeRender.SymbologyTestCase"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestCase.BarcodeText">
+            <summary>
+            Gets the barcode text.
+            </summary>
+            <value>The barcode text.</value>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestCase.BarcodeImage">
+            <summary>
+            Gets the barcode image.
+            </summary>
+            <value>The barcode image.</value>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestCase.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, 
+            releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestCase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and 
+            unmanaged resources; <c>false</c> to release only unmanaged 
+            resources.</param>
+        </member>
+        <member name="T:BarcodeRender.SymbologyTestGroup">
+            <summary>
+            <c>SymbologyTestGroup</c> encapsulates tests for a particular 
+            symbology.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestGroup"/> class.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestGroup.#ctor(Zen.Barcode.BarcodeSymbology)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestGroup"/> class.
+            </summary>
+            <param name="symbology">The symbology.</param>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestGroup.Symbology">
+            <summary>
+            Gets or sets the symbology.
+            </summary>
+            <value>The symbology.</value>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestGroup.TestItems">
+            <summary>
+            Gets the test items.
+            </summary>
+            <value>The test items.</value>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestGroup.AddTestCase(System.String)">
+            <summary>
+            Adds the test case.
+            </summary>
+            <param name="test">The test.</param>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestGroup.GetBarcodeImage(System.Int32,System.Int32)">
+            <summary>
+            Gets the barcode image.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="maxBarHeight">Height of the max bar.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestGroup.GetBarcodeText(System.Int32)">
+            <summary>
+            Gets the barcode text.
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestGroup.GetTestCases(System.Int32)">
+            <summary>
+            Gets the test cases.
+            </summary>
+            <param name="maxBarHeight">Height of the max bar.</param>
+            <returns></returns>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestGroup.DrawObject">
+            <summary>
+            Gets the draw object.
+            </summary>
+            <value>The draw object.</value>
+        </member>
+        <member name="T:BarcodeRender.SymbologyTestItem">
+            <summary>
+            <c>SymbologyTestItem</c> encapsulates a single unit test case.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestItem"/> class.
+            </summary>
+        </member>
+        <member name="M:BarcodeRender.SymbologyTestItem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BarcodeRender.SymbologyTestItem"/> class.
+            </summary>
+            <param name="barcode">The barcode.</param>
+        </member>
+        <member name="P:BarcodeRender.SymbologyTestItem.Barcode">
+            <summary>
+            Gets or sets the barcode.
+            </summary>
+            <value>The barcode.</value>
+        </member>
+    </members>
+</doc>

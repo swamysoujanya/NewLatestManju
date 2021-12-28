@@ -1,0 +1,91 @@
+﻿
+////////////////////////////////////////////////////////////////////////////////
+/*Create Master Data*/
+INSERT INTO idtracker(IDType, IDNumber) VALUES('Invoice', '0');
+INSERT INTO idtracker(IDType, IDNumber) VALUES('Repair', '0');
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+/*Roles*/
+INSERT INTO configuration
+	(UserRole, `File`, Stock, Billing, Invoice, ShowInvoice, Report, Maintanance, `Repair`, ShowRepair, User, Supplier, Customer)
+	VALUES ('Employee', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+	INSERT INTO configuration
+	(UserRole, `File`, Stock, Billing, Invoice, ShowInvoice, Report, Maintanance, `Repair`, ShowRepair, User, Supplier, Customer)
+	VALUES ('SuperAdmin', 1, 1, 1,1, 1, 1, 1, 1, 1, 1,1, 1)
+
+
+	insert into usermaster (UserName,UserLoginID,UserPassword,Role)
+Values ('SuperAdmin','SuperAdmin','Admin.123','SuperAdmin')
+
+
+INSERT INTO features
+	(featureID, featureName)
+	VALUES (NULL, 'File') ,
+	        (NULL, 'PurchaseEntry'),
+	        (NULL, 'Billing'),
+	        (NULL, 'Invoice'),
+	        (NULL, 'ShowInvoice'),
+	        (NULL, 'Maintanance'),
+	        (NULL, 'ShowRepair'),
+	        (NULL, 'User'),
+	        (NULL, 'Supplier'),
+	        (NULL, 'Customer') ,
+			(NULL, 'ReGenerateBarcode') ,
+			(NULL,'StockReturn'),
+			(NULL,'Report'),
+			(NULL,'Repair'),
+			(NULL,'Stock'),
+			(NULL,'Administartion');
+
+
+
+	
+
+	insert into barcodemaster (ID,BarCode)
+values (NULL,'0001'),
+(NULL,'0002'),(NULL,'0003'),(NULL,'0004'),(NULL,'0005'),(NULL,'0006'),(NULL,'0007')
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+/*To reset Identity column to 1*/
+ALTER TABLE barcodemaster AUTO_INCREMENT = 1
+
+///////////////////////////////////////////////////////////////////////////////////////////
+ MessageBox.Show(ValidationUtility.GetValidationString("supplier name."), "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+ MessageBox.Show("User update successfully.", "Success Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+ MessageBox.Show("Unable to update user. " + errorInfo, "Error  Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+  MessageBox.Show("Unable to update user. ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+  //Eliminated below method after creating master cache layer
+
+
+   Logger.LogFile(ex.Message,"", "", ex.LineNumber(), this.FindForm().Name);
+
+    Logger.LogFile(ex.Message, e.ToString(), ((Control)sender).Name, ex.LineNumber(), this.FindForm().Name);
+
+
+
+
+	////Temp Scripts
+
+	CREATE TABLE `features` (
+	`featureID` INT(11) NOT NULL AUTO_INCREMENT,
+	`featureName` TINYTEXT NULL,
+	PRIMARY KEY (`featureID`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
+
+
+CREATE TABLE `userfeaturemapping` (
+	`userID` INT(11) NULL DEFAULT NULL,
+	`featureID` INT(11) NULL DEFAULT NULL
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
