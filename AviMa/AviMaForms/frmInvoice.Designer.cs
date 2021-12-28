@@ -951,12 +951,14 @@
             this.SINO.HeaderText = "SI. No";
             this.SINO.Name = "SINO";
             this.SINO.ReadOnly = true;
+            this.SINO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ItemName
             // 
             this.ItemName.HeaderText = "Name";
             this.ItemName.MaxInputLength = 35;
             this.ItemName.Name = "ItemName";
+            this.ItemName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ItemBarCode
             // 
@@ -964,24 +966,28 @@
             this.ItemBarCode.MaxInputLength = 8;
             this.ItemBarCode.Name = "ItemBarCode";
             this.ItemBarCode.ReadOnly = true;
+            this.ItemBarCode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Itemqnty
             // 
             this.Itemqnty.HeaderText = "Qnty";
             this.Itemqnty.MaxInputLength = 4;
             this.Itemqnty.Name = "Itemqnty";
+            this.Itemqnty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ITEMRATE
             // 
             this.ITEMRATE.HeaderText = "Rate";
             this.ITEMRATE.MaxInputLength = 8;
             this.ITEMRATE.Name = "ITEMRATE";
+            this.ITEMRATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // AMOUNT
             // 
             this.AMOUNT.HeaderText = "Amount(INR)";
             this.AMOUNT.Name = "AMOUNT";
             this.AMOUNT.ReadOnly = true;
+            this.AMOUNT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ItemDelete
             // 
@@ -994,6 +1000,7 @@
             this.InvDateTime.HeaderText = "InvDateTime";
             this.InvDateTime.Name = "InvDateTime";
             this.InvDateTime.ReadOnly = true;
+            this.InvDateTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.InvDateTime.Visible = false;
             // 
             // frmInvoice
