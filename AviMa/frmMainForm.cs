@@ -79,6 +79,7 @@ namespace AviMa
         FormAppAdmin objFormAppAdmin = null;
         frmLedgerReprot objfrmLedgerReprot = null;
         frmLedgerReport objfrmLedgerReport = null;
+        frmPrinterConfigure objfrmPrinterConfigure = null;
 
         bool bStock = false;
         bool bAdminCustomer = false;
@@ -488,6 +489,17 @@ namespace AviMa
                 objfrmLedgerReport = new frmLedgerReport(UserID);
             this.Hide();
             objfrmLedgerReport.ShowDialog();
+            this.Show();
+        }
+
+        private void configurePrinterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveControl();
+
+            if (objfrmPrinterConfigure == null)
+                objfrmPrinterConfigure = new frmPrinterConfigure();
+            this.Hide();
+            objfrmPrinterConfigure.ShowDialog();
             this.Show();
         }
     }

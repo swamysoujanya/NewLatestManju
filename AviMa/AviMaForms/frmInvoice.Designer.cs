@@ -864,8 +864,10 @@
             this.txtNote1.Location = new System.Drawing.Point(6, 22);
             this.txtNote1.MaxLength = 40;
             this.txtNote1.Name = "txtNote1";
+            this.txtNote1.ReadOnly = true;
             this.txtNote1.Size = new System.Drawing.Size(356, 26);
             this.txtNote1.TabIndex = 83;
+            this.txtNote1.Text = "Any mistakes in bill will be corrected or refunded";
             // 
             // txtNote2
             // 
@@ -873,8 +875,10 @@
             this.txtNote2.Location = new System.Drawing.Point(6, 55);
             this.txtNote2.MaxLength = 40;
             this.txtNote2.Name = "txtNote2";
+            this.txtNote2.ReadOnly = true;
             this.txtNote2.Size = new System.Drawing.Size(356, 26);
             this.txtNote2.TabIndex = 84;
+            this.txtNote2.Text = "with in 15 days of purchanse.";
             // 
             // txtNote3
             // 
@@ -882,6 +886,7 @@
             this.txtNote3.Location = new System.Drawing.Point(6, 89);
             this.txtNote3.MaxLength = 40;
             this.txtNote3.Name = "txtNote3";
+            this.txtNote3.ReadOnly = true;
             this.txtNote3.Size = new System.Drawing.Size(356, 26);
             this.txtNote3.TabIndex = 85;
             // 

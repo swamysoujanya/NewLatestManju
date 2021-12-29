@@ -147,6 +147,12 @@
     <Compile Include="AviMaForms\frmLedgerReprot.Designer.cs">
       <DependentUpon>frmLedgerReprot.cs</DependentUpon>
     </Compile>
+    <Compile Include="AviMaForms\frmPrinterConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AviMaForms\frmPrinterConfigure.Designer.cs">
+      <DependentUpon>frmPrinterConfigure.cs</DependentUpon>
+    </Compile>
     <Compile Include="AviMaForms\frmSearchCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     <EmbeddedResource Include="AviMaForms\frmLedgerReprot.resx">
       <DependentUpon>frmLedgerReprot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AviMaForms\frmPrinterConfigure.resx">
+      <DependentUpon>frmPrinterConfigure.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AviMaForms\frmSearchCustomer.resx">
       <DependentUpon>frmSearchCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +380,7 @@
     <Folder Include="BussinesLogicLayer\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AvimaConfigurables.xml" />
     <Content Include="Images\login.jpg" />
     <None Include="Images\oneRupeeImage.jpg" />
     <None Include="Images\progressBar.gif" />

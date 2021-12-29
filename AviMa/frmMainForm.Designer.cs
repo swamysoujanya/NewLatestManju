@@ -62,6 +62,7 @@
             this.pnlMainPanel = new System.Windows.Forms.Panel();
             this.lblUserLoggedIN = new System.Windows.Forms.Label();
             this.lblLoggedInDateTime = new System.Windows.Forms.Label();
+            this.configurePrinterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnStrpMainForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -224,7 +225,8 @@
             this.userConfigurationToolStripMenuItem,
             this.customerToolStripMenuItem,
             this.supplierToolStripMenuItem,
-            this.applicationConfigurationToolStripMenuItem});
+            this.applicationConfigurationToolStripMenuItem,
+            this.configurePrinterToolStripMenuItem});
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
             this.configurationToolStripMenuItem.Size = new System.Drawing.Size(108, 23);
             this.configurationToolStripMenuItem.Text = "Administartion";
@@ -343,6 +345,13 @@
             this.lblLoggedInDateTime.TabIndex = 3;
             this.lblLoggedInDateTime.Text = "label1";
             // 
+            // configurePrinterToolStripMenuItem
+            // 
+            this.configurePrinterToolStripMenuItem.Name = "configurePrinterToolStripMenuItem";
+            this.configurePrinterToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
+            this.configurePrinterToolStripMenuItem.Text = "Configure Printer";
+            this.configurePrinterToolStripMenuItem.Click += new System.EventHandler(this.configurePrinterToolStripMenuItem_Click);
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +411,7 @@
         public System.Windows.Forms.ToolStripMenuItem applicationConfigurationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ledgerReportToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem ledgerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurePrinterToolStripMenuItem;
     }
 }
 

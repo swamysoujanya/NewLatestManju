@@ -404,31 +404,11 @@ namespace AviMa.AviMaForms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    #region Load Cache
+
             string errorInfo = "";
-            //    bool check = MasterCache.SetCache(ref errorInfo);
+            this.objUserDetails = MasterCache.GetUserDataFrmCache(ref errorInfo);
 
-            //if (!check)
-            //{
-            //    MessageBox.Show("Unabled to load cache data " + errorInfo, "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-            objUserDetails = MasterCache.GetUserDataFrmCache(ref errorInfo);
-            //}
-            //    #endregion Load Cache
-
-            txtLoginID.Text = "SuperAdmin";
-            // txtPassword.Text = "admin.12";
-            txtPassword.Text = "siddh731";
-            ////}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message + "Method Name:" + ex.GetBaseException(), "Error  Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    Logger.LogFile(ex.Message, e.ToString(), ((Control)sender).Name, ex.LineNumber(), this.FindForm().Name);
-            //}
+            
 
         }
     }
