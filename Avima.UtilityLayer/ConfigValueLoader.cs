@@ -28,14 +28,19 @@ namespace AviMa.UtilityLayer
 
                 XmlDataDocument xmldoc = new XmlDataDocument();
                 XmlNodeList xmlnode;
-                int i = 0;
-                string str = null;
-                FileStream fs = new FileStream("AvimaConfigurables.xml", FileMode.Open, FileAccess.Read);
-                xmldoc.Load(fs);
-                xmlnode = xmldoc.GetElementsByTagName("Name");
 
-                printerName = xmlnode[0].ChildNodes.Item(0).InnerText.Trim();
+                if (File.Exists("AvimaConfigurables.xml"))
+                {
 
+                    FileStream fs = new FileStream("AvimaConfigurables.xml", FileMode.Open, FileAccess.Read);
+                    xmldoc.Load(fs);
+                    xmlnode = xmldoc.GetElementsByTagName("Name");
+                    printerName = xmlnode[0].ChildNodes.Item(0).InnerText.Trim();
+                }
+                else
+                {
+                    return "Printer Not Configured";
+                }
                 
 
                 return printerName;
