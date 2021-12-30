@@ -34,6 +34,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoice));
             this.dtGridInvoice = new System.Windows.Forms.DataGridView();
+            this.SINO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Itemqnty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITEMRATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AMOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemDelete = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.InvDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdBtnRetail = new System.Windows.Forms.RadioButton();
             this.rdbtnWholSaleCash = new System.Windows.Forms.RadioButton();
@@ -105,14 +113,6 @@
             this.grpBoxOldBal = new System.Windows.Forms.GroupBox();
             this.grpPauseBilling = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.SINO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemBarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Itemqnty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITEMRATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AMOUNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemDelete = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.InvDateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridInvoice)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -144,6 +144,63 @@
             this.dtGridInvoice.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridInvoice_CellLeave);
             this.dtGridInvoice.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtGridInvoice_EditingControlShowing);
             this.dtGridInvoice.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridInvoice_RowEnter);
+            // 
+            // SINO
+            // 
+            this.SINO.HeaderText = "SI. No";
+            this.SINO.Name = "SINO";
+            this.SINO.ReadOnly = true;
+            this.SINO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "Name";
+            this.ItemName.MaxInputLength = 35;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ItemBarCode
+            // 
+            this.ItemBarCode.HeaderText = "Bar Code";
+            this.ItemBarCode.MaxInputLength = 8;
+            this.ItemBarCode.Name = "ItemBarCode";
+            this.ItemBarCode.ReadOnly = true;
+            this.ItemBarCode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Itemqnty
+            // 
+            this.Itemqnty.HeaderText = "Qnty";
+            this.Itemqnty.MaxInputLength = 4;
+            this.Itemqnty.Name = "Itemqnty";
+            this.Itemqnty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ITEMRATE
+            // 
+            this.ITEMRATE.HeaderText = "Rate";
+            this.ITEMRATE.MaxInputLength = 8;
+            this.ITEMRATE.Name = "ITEMRATE";
+            this.ITEMRATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AMOUNT
+            // 
+            this.AMOUNT.HeaderText = "Amount(INR)";
+            this.AMOUNT.Name = "AMOUNT";
+            this.AMOUNT.ReadOnly = true;
+            this.AMOUNT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ItemDelete
+            // 
+            this.ItemDelete.HeaderText = "Delete";
+            this.ItemDelete.Name = "ItemDelete";
+            // 
+            // InvDateTime
+            // 
+            this.InvDateTime.DataPropertyName = "InvDateTime";
+            this.InvDateTime.HeaderText = "InvDateTime";
+            this.InvDateTime.Name = "InvDateTime";
+            this.InvDateTime.ReadOnly = true;
+            this.InvDateTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.InvDateTime.Visible = false;
             // 
             // panel1
             // 
@@ -886,7 +943,6 @@
             this.txtNote3.Location = new System.Drawing.Point(6, 89);
             this.txtNote3.MaxLength = 40;
             this.txtNote3.Name = "txtNote3";
-            this.txtNote3.ReadOnly = true;
             this.txtNote3.Size = new System.Drawing.Size(356, 26);
             this.txtNote3.TabIndex = 85;
             // 
@@ -950,63 +1006,6 @@
             this.groupBox3.TabIndex = 89;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Note(s)";
-            // 
-            // SINO
-            // 
-            this.SINO.HeaderText = "SI. No";
-            this.SINO.Name = "SINO";
-            this.SINO.ReadOnly = true;
-            this.SINO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ItemName
-            // 
-            this.ItemName.HeaderText = "Name";
-            this.ItemName.MaxInputLength = 35;
-            this.ItemName.Name = "ItemName";
-            this.ItemName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ItemBarCode
-            // 
-            this.ItemBarCode.HeaderText = "Bar Code";
-            this.ItemBarCode.MaxInputLength = 8;
-            this.ItemBarCode.Name = "ItemBarCode";
-            this.ItemBarCode.ReadOnly = true;
-            this.ItemBarCode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Itemqnty
-            // 
-            this.Itemqnty.HeaderText = "Qnty";
-            this.Itemqnty.MaxInputLength = 4;
-            this.Itemqnty.Name = "Itemqnty";
-            this.Itemqnty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ITEMRATE
-            // 
-            this.ITEMRATE.HeaderText = "Rate";
-            this.ITEMRATE.MaxInputLength = 8;
-            this.ITEMRATE.Name = "ITEMRATE";
-            this.ITEMRATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // AMOUNT
-            // 
-            this.AMOUNT.HeaderText = "Amount(INR)";
-            this.AMOUNT.Name = "AMOUNT";
-            this.AMOUNT.ReadOnly = true;
-            this.AMOUNT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ItemDelete
-            // 
-            this.ItemDelete.HeaderText = "Delete";
-            this.ItemDelete.Name = "ItemDelete";
-            // 
-            // InvDateTime
-            // 
-            this.InvDateTime.DataPropertyName = "InvDateTime";
-            this.InvDateTime.HeaderText = "InvDateTime";
-            this.InvDateTime.Name = "InvDateTime";
-            this.InvDateTime.ReadOnly = true;
-            this.InvDateTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.InvDateTime.Visible = false;
             // 
             // frmInvoice
             // 
