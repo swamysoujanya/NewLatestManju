@@ -961,148 +961,151 @@ namespace AviMa.AviMaForms
         {
             try
             {
-
-                ClearControls(); // clear all invoice form controls before displaying temp invoices
-                ClearInvItemFields(); // clear all invoice form controls before displaying temp invoices
-
-
-                InvoiceData objInvoiceData = new InvoiceData(UserID);
-                this.Hide();
-                objInvoiceData.InvoiceType = AviMaConstants.TempInvoiceFlag;
-                objInvoiceData.ShowDialog();
-
-                InvoiceDO objInvoiceDetails = objInvoiceData.InvoiceDetails;
-
-                try
+                if (MessageBox.Show("This will reload the entire Invoice page, please confirm.", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    if (objInvoiceDetails != null && objInvoiceDetails.ItemsList.Count != 0)
+
+                    ClearControls(); // clear all invoice form controls before displaying temp invoices
+                    ClearInvItemFields(); // clear all invoice form controls before displaying temp invoices
+
+
+                    InvoiceData objInvoiceData = new InvoiceData(UserID);
+                    this.Hide();
+                    objInvoiceData.InvoiceType = AviMaConstants.TempInvoiceFlag;
+                    objInvoiceData.ShowDialog();
+
+                    InvoiceDO objInvoiceDetails = objInvoiceData.InvoiceDetails;
+
+                    try
                     {
-
-
-
-                        txtInvoiceNu.Text = objInvoiceDetails.InvoiceNumber;
-
-                        if (objInvoiceDetails.CustomerDetails != null)
-                        {
-                            txtCustName.Text = objInvoiceDetails.CustomerDetails.CustName;
-                            txtMobile1.Text = objInvoiceDetails.CustomerDetails.CustMobile1;
-                            txtMobile2.Text = objInvoiceDetails.CustomerDetails.CustMobile2;
-                            txtAddress.Text = objInvoiceDetails.CustomerDetails.CustTown;
-                        }
-
-                        int siNo = 1;
-                        int i = 0;
-
-                        //temp code
-                        //DataTable dt = new DataTable();
-                        //dtGridInvoice.DataSource = dt;
-
-                        dtGridInvoice.Rows.Add(objInvoiceDetails.ItemsList.Count);
-
-                        foreach (InvoiceItemsDO item in objInvoiceDetails.ItemsList)
+                        if (objInvoiceDetails != null && objInvoiceDetails.ItemsList.Count != 0)
                         {
 
 
 
+                            txtInvoiceNu.Text = objInvoiceDetails.InvoiceNumber;
 
-                            //objInvoiceItems.ItemName = Convert.ToString(dtGridInvoice["ItemName", i].Value);
-                            //objInvoiceItems.BarCode = Convert.ToString(dtGridInvoice["ItemBarCode", i].Value);
-                            //objInvoiceItems.ItemQnty = Convert.ToString(dtGridInvoice["Itemqnty", i].Value);
-                            //objInvoiceItems.ItemRate = Convert.ToString(dtGridInvoice["ITEMRATE", i].Value);
-                            //objInvoiceItems.Amount = Convert.ToString(dtGridInvoice["AMOUNT", i].Value);
-                            //objInvoiceItems.CreatedDateTime = Convert.ToString(dtGridInvoice["InvDateTime", i].Value);
+                            if (objInvoiceDetails.CustomerDetails != null)
+                            {
+                                txtCustName.Text = objInvoiceDetails.CustomerDetails.CustName;
+                                txtMobile1.Text = objInvoiceDetails.CustomerDetails.CustMobile1;
+                                txtMobile2.Text = objInvoiceDetails.CustomerDetails.CustMobile2;
+                                txtAddress.Text = objInvoiceDetails.CustomerDetails.CustTown;
+                            }
+
+                            int siNo = 1;
+                            int i = 0;
+
+                            //temp code
+                            //DataTable dt = new DataTable();
+                            //dtGridInvoice.DataSource = dt;
+
+                            dtGridInvoice.Rows.Add(objInvoiceDetails.ItemsList.Count);
+
+                            foreach (InvoiceItemsDO item in objInvoiceDetails.ItemsList)
+                            {
 
 
+
+
+                                //objInvoiceItems.ItemName = Convert.ToString(dtGridInvoice["ItemName", i].Value);
+                                //objInvoiceItems.BarCode = Convert.ToString(dtGridInvoice["ItemBarCode", i].Value);
+                                //objInvoiceItems.ItemQnty = Convert.ToString(dtGridInvoice["Itemqnty", i].Value);
+                                //objInvoiceItems.ItemRate = Convert.ToString(dtGridInvoice["ITEMRATE", i].Value);
+                                //objInvoiceItems.Amount = Convert.ToString(dtGridInvoice["AMOUNT", i].Value);
+                                //objInvoiceItems.CreatedDateTime = Convert.ToString(dtGridInvoice["InvDateTime", i].Value);
+
+
+
+                                dtGridInvoice[0, i].Value = siNo;
+                                dtGridInvoice["ItemName", i].Value = item.ItemName;
+                                dtGridInvoice["ItemBarCode", i].Value = item.BarCode;
+                                dtGridInvoice["Itemqnty", i].Value = item.ItemQnty;
+
+
+                                if (ConfigValueLoader.CalculateItemPrice)
+                                    dtGridInvoice["ITEMRATE", i].Value = Convert.ToString(Convert.ToDecimal(item.ItemRate) * 10);
+                                else
+                                    dtGridInvoice["ITEMRATE", i].Value = item.ItemRate;
+
+                                if (ConfigValueLoader.CalculateItemPrice)
+                                    dtGridInvoice["AMOUNT", i].Value = Convert.ToString(Convert.ToDecimal(item.Amount) * 10);
+                                else
+                                    dtGridInvoice["AMOUNT", i].Value = item.Amount;
+
+
+                                dtGridInvoice["ItemDelete", i].Value = "Delete";
+
+                                dtGridInvoice["InvDateTime", i].Value = item.CreatedDateTime;
+                                siNo++;
+                                i++;
+                            }
 
                             dtGridInvoice[0, i].Value = siNo;
-                            dtGridInvoice["ItemName", i].Value = item.ItemName;
-                            dtGridInvoice["ItemBarCode", i].Value = item.BarCode;
-                            dtGridInvoice["Itemqnty", i].Value = item.ItemQnty;
+
+                            txtPackedBy.Text = objInvoiceDetails.PackedBy;
+                            txtTotalItems.Text = objInvoiceDetails.TotalItems;
+                            string[] noteList = objInvoiceDetails.InvNote.Split('\n');
+
+
+                            try
+                            {
+                                txtNote1.Text = noteList[0];
+                                txtNote2.Text = noteList[1];
+                                txtNote3.Text = noteList[2];
+                                txtNote4.Text = noteList[3];
+                            }
+                            catch
+                            {
+                                // don't do anything it's just index out of range exception 
+                            }
+
 
 
                             if (ConfigValueLoader.CalculateItemPrice)
-                                dtGridInvoice["ITEMRATE", i].Value = Convert.ToString(Convert.ToDecimal(item.ItemRate) * 10);
+                                txtGrnadTotal.Text = Convert.ToString(Convert.ToDecimal(objInvoiceDetails.TotalAmount) * 10);
                             else
-                                dtGridInvoice["ITEMRATE", i].Value = item.ItemRate;
+                                txtGrnadTotal.Text = objInvoiceDetails.TotalAmount;
 
                             if (ConfigValueLoader.CalculateItemPrice)
-                                dtGridInvoice["AMOUNT", i].Value = Convert.ToString(Convert.ToDecimal(item.Amount) * 10);
+                                txtGrnadTotal2.Text = Convert.ToString(Convert.ToDecimal(objInvoiceDetails.GrandTotalAmount) * 10);
                             else
-                                dtGridInvoice["AMOUNT", i].Value = item.Amount;
+                                txtGrnadTotal2.Text = objInvoiceDetails.GrandTotalAmount;
 
 
-                            dtGridInvoice["ItemDelete", i].Value = "Delete";
 
-                            dtGridInvoice["InvDateTime", i].Value = item.CreatedDateTime;
-                            siNo++;
-                            i++;
+                            txtDiscount.Text = objInvoiceDetails.Discuont;
+
+                            if (ConfigValueLoader.CalculateItemPrice)
+                                lblGrandTotal.Text = Convert.ToString(Convert.ToDecimal(txtGrnadTotal2.Text) * 10) + ".00";
+                            else
+                                lblGrandTotal.Text = txtGrnadTotal2.Text + ".00";
+
+
+                            SetSaleType(objInvoiceDetails.SaleType);
+
+                            #region Get existing balance
+                            try
+                            {
+                                string errorInfo = "";
+                                lblOldBalance.Text = Convert.ToString(GetCustOldBalance(Convert.ToInt16(objInvoiceDetails.CustomerDetails.CustID), ref errorInfo));
+                            }
+                            catch (Exception ex)
+                            {
+                                Logger.LogFile(ex.Message, e.ToString(), ((Control)sender).Name, ex.LineNumber(), this.FindForm().Name);
+                            }
+                            #endregion Get existing balance
+
+                            invDataFromTempInv = true;
                         }
-
-                        dtGridInvoice[0, i].Value = siNo;
-
-                        txtPackedBy.Text = objInvoiceDetails.PackedBy;
-                        txtTotalItems.Text = objInvoiceDetails.TotalItems;
-                        string[] noteList = objInvoiceDetails.InvNote.Split('\n');
-
-
-                        try
-                        {
-                            txtNote1.Text = noteList[0];
-                            txtNote2.Text = noteList[1];
-                            txtNote3.Text = noteList[2];
-                            txtNote4.Text = noteList[3];
-                        }
-                        catch
-                        {
-                            // don't do anything it's just index out of range exception 
-                        }
-
-
-
-                        if (ConfigValueLoader.CalculateItemPrice)
-                            txtGrnadTotal.Text = Convert.ToString(Convert.ToDecimal(objInvoiceDetails.TotalAmount) * 10);
-                        else
-                            txtGrnadTotal.Text = objInvoiceDetails.TotalAmount;
-
-                        if (ConfigValueLoader.CalculateItemPrice)
-                            txtGrnadTotal2.Text = Convert.ToString(Convert.ToDecimal(objInvoiceDetails.GrandTotalAmount) * 10);
-                        else
-                            txtGrnadTotal2.Text = objInvoiceDetails.GrandTotalAmount;
-
-
-
-                        txtDiscount.Text = objInvoiceDetails.Discuont;
-
-                        if (ConfigValueLoader.CalculateItemPrice)
-                            lblGrandTotal.Text = Convert.ToString(Convert.ToDecimal(txtGrnadTotal2.Text) * 10) + ".00";
-                        else
-                            lblGrandTotal.Text = txtGrnadTotal2.Text + ".00";
-
-
-                        SetSaleType(objInvoiceDetails.SaleType);
-
-                        #region Get existing balance
-                        try
-                        {
-                            string errorInfo = "";
-                            lblOldBalance.Text = Convert.ToString(GetCustOldBalance(Convert.ToInt16(objInvoiceDetails.CustomerDetails.CustID), ref errorInfo));
-                        }
-                        catch (Exception ex)
-                        {
-                            Logger.LogFile(ex.Message, e.ToString(), ((Control)sender).Name, ex.LineNumber(), this.FindForm().Name);
-                        }
-                        #endregion Get existing balance
-
-                        invDataFromTempInv = true;
                     }
-                }
-                catch (Exception ex)
-                {
-                    Logger.LogFile(ex.Message, e.ToString(), ((Control)sender).Name, ex.LineNumber(), this.FindForm().Name);
-                }
-                // dtGridInvoice.Rows.RemoveAt(objInvoiceDetails.ItemsList.Count);
+                    catch (Exception ex)
+                    {
+                        Logger.LogFile(ex.Message, e.ToString(), ((Control)sender).Name, ex.LineNumber(), this.FindForm().Name);
+                    }
+                    // dtGridInvoice.Rows.RemoveAt(objInvoiceDetails.ItemsList.Count);
 
-                this.Show();
+                    this.Show();
+                }
             }
             catch (Exception ex)
             {
