@@ -66,6 +66,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -249,6 +250,13 @@
     <Compile Include="AviMaUserControls\Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DBIntialiser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBIntialiser.designer.cs">
+      <DependentUpon>DBIntialiser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCustAccDeb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AviMaUserControls\Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBIntialiser.resx">
+      <DependentUpon>DBIntialiser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustAccDeb.resx">
       <DependentUpon>frmCustAccDeb.cs</DependentUpon>
