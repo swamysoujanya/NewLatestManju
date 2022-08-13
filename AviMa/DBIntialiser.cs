@@ -23,7 +23,7 @@ namespace AviMa
         }
 
         private void buttonShowBrowseDialog_Click(object sender, EventArgs e)
-        {
+        {           
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 labelSelectedPath.Text = folderBrowserDialog.SelectedPath;
@@ -133,8 +133,10 @@ namespace AviMa
                             }
                             else
                             {
+                                this.Hide();
                                 LoginForm objLoginForm = new LoginForm();
-                                objLoginForm.ShowDialog();
+                                objLoginForm.Show();
+                               
                             }
                             #endregion Load Cache
                         }
@@ -220,8 +222,10 @@ namespace AviMa
             System.IO.File.WriteAllLines($"{mySQLServer_DefaultConfigurationSetting}", lines.ToArray());
         }
 
-        private void TryConnection()
+        private bool TryConnection()
         {
+            bool _checkDbconnetion = false;
+
             var dbCon = DBConnection.Instance();
             dbCon.Server = "localhost"; //hostname (make sure to add new user along with hostname and grant the privilege to schema's)
             dbCon.DatabaseName = "avimadb"; //Schema name is database name
@@ -241,18 +245,32 @@ namespace AviMa
                         //MessageBox.Show(someStringFromColumnZero + "," + someStringFromColumnOne);
                     }
                     dbCon.Close();
+
+                    _checkDbconnetion = true;
                 }
             }
             catch (Exception ex)
             {
+                _checkDbconnetion = false;
                 txtErrorLogger.Text = ex.Message;
                 MessageBox.Show(ex.Message);
             }
+
+            return _checkDbconnetion;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (TryConnection())
+            {
+                this.Hide();
+                LoginForm objLoginForm = new LoginForm();
+                objLoginForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a right drive and proceed further");
+            }
         }
     }
 }

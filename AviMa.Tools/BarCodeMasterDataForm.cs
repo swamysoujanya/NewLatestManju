@@ -29,15 +29,15 @@ namespace AviMa.Tools
             try
             {
 
-                for (int i = 1; i < 10000; i++)// upto 9999
+                for (int i = 1; i < 1000000; i++)// upto 9999
                 {
                     string _iString = Convert.ToString(i);
 
                     int length = _iString.Length;
 
-                    if (length < 4)
+                    if (length < 6)
                     {
-                        int zerosToAppend = 4 - length;
+                        int zerosToAppend = 6 - length;
                         string _zeros = "";
                         for (int j = 0; j < zerosToAppend; j++)
                         {

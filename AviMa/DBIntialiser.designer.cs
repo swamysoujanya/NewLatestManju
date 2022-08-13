@@ -34,14 +34,14 @@
             this.labelSelectedPath = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.txtErrorLogger = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(12, 116);
+            this.buttonConnect.Location = new System.Drawing.Point(13, 98);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(205, 30);
+            this.buttonConnect.Size = new System.Drawing.Size(231, 38);
             this.buttonConnect.TabIndex = 0;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
@@ -49,9 +49,10 @@
             // 
             // buttonShowBrowseDialog
             // 
-            this.buttonShowBrowseDialog.Location = new System.Drawing.Point(15, 35);
+            this.buttonShowBrowseDialog.Location = new System.Drawing.Point(17, 44);
+            this.buttonShowBrowseDialog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonShowBrowseDialog.Name = "buttonShowBrowseDialog";
-            this.buttonShowBrowseDialog.Size = new System.Drawing.Size(202, 37);
+            this.buttonShowBrowseDialog.Size = new System.Drawing.Size(227, 46);
             this.buttonShowBrowseDialog.TabIndex = 1;
             this.buttonShowBrowseDialog.Text = "Select Drive";
             this.buttonShowBrowseDialog.UseVisualStyleBackColor = true;
@@ -60,17 +61,18 @@
             // labelSelectedPath
             // 
             this.labelSelectedPath.AutoSize = true;
-            this.labelSelectedPath.Location = new System.Drawing.Point(12, 9);
+            this.labelSelectedPath.Location = new System.Drawing.Point(14, 11);
             this.labelSelectedPath.Name = "labelSelectedPath";
-            this.labelSelectedPath.Size = new System.Drawing.Size(109, 16);
+            this.labelSelectedPath.Size = new System.Drawing.Size(129, 20);
             this.labelSelectedPath.TabIndex = 2;
             this.labelSelectedPath.Text = "No path selected";
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(15, 161);
+            this.buttonClear.Location = new System.Drawing.Point(16, 154);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(202, 32);
+            this.buttonClear.Size = new System.Drawing.Size(227, 40);
             this.buttonClear.TabIndex = 3;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -78,35 +80,27 @@
             // 
             // txtErrorLogger
             // 
-            this.txtErrorLogger.Location = new System.Drawing.Point(223, 35);
+            this.txtErrorLogger.Location = new System.Drawing.Point(251, 44);
+            this.txtErrorLogger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtErrorLogger.Multiline = true;
             this.txtErrorLogger.Name = "txtErrorLogger";
             this.txtErrorLogger.ReadOnly = true;
-            this.txtErrorLogger.Size = new System.Drawing.Size(565, 384);
+            this.txtErrorLogger.Size = new System.Drawing.Size(635, 479);
             this.txtErrorLogger.TabIndex = 4;
             // 
-            // button1
+            // DBIntialiser
             // 
-            this.button1.Location = new System.Drawing.Point(15, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Skip";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Form
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 431);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(900, 539);
             this.Controls.Add(this.txtErrorLogger);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.labelSelectedPath);
             this.Controls.Add(this.buttonShowBrowseDialog);
             this.Controls.Add(this.buttonConnect);
-            this.Name = "Form";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "DBIntialiser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DB Intialiser";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,7 +115,6 @@
         private System.Windows.Forms.Label labelSelectedPath;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox txtErrorLogger;
-        private System.Windows.Forms.Button button1;
     }
 }
 
