@@ -42,6 +42,9 @@ namespace AviMa
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
+            txtErrorLogger.Text = "Connecting To DB...";
+            this.Cursor = Cursors.WaitCursor;
+            
             try
             {
                 buttonClear.Enabled = false;
@@ -163,13 +166,18 @@ namespace AviMa
                         }
                     }
                 }
-
                 ResetControls(false);
+
+                txtErrorLogger.Text = "Connecting Succeded...";
             }
             catch (Exception ex)
             {
                 txtErrorLogger.Text = ex.ToString();
+                this.Cursor = Cursors.Default;
+                txtErrorLogger.Text = "Connecting Failed...";
             }
+
+            this.Cursor = Cursors.Default;
         }
 
         private void ResetControls(bool resetLabel = true)
