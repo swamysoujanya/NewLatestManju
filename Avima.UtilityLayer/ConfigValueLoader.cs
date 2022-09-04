@@ -11,7 +11,7 @@ namespace AviMa.UtilityLayer
    public static class ConfigValueLoader
     {
         //public const string ConnectionString = "Server = localhost; UserId = root; Pwd =1bm00ee039; Initial Catalog = avimadb"; // office Dev
-       // public const string ConnectionString = "Server = localhost; UserId = root; Pwd =avima; initial Catalog = avimadb"; // Manju , Home Dev
+        public const string ConnectionString = "Server = localhost; UserId = root; Pwd =zaserp; initial Catalog = avimadb"; // Manju , Home Dev
         //public static string ConnectionString = ConfigurationManager.AppSettings["DBConnection"];// "Server = localhost; UserId = root; Pwd =avima; Initial Catalog = avimadb";
         //public static string ConnectionString =  Convert.ToString(Properties.Settings.Default["SqlConnection"]);
         public static string PrinterName = GetPrinterName();// ConfigurationManager.AppSettings["PrinterName"]; //"CutePDF Writer";

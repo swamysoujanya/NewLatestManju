@@ -805,7 +805,7 @@ namespace AviMa.AviMaUserControls
 
                         ItemsDO objItemsDO = new ItemsDO();
 
-
+                        string tempOldBarcOde = txtBarCodeCrea.Text.Trim(); // To avoid duplictae bar code
                         objItemsDO.BarCode = txtBarCodeCrea.Text.Trim();
                         objItemsDO.Name = txtNameCrea.Text.Trim();
                         objItemsDO.Description = txtDescripCrea.Text.Trim();
@@ -866,9 +866,14 @@ namespace AviMa.AviMaUserControls
                         ClearAllCreateFields(true);
                         isValidStockAdded = true;
 
+                       
                         // get new bar code for next ITEM 
                         AssignNewBarCodeID(nextBarCode);
                         nextBarCode++;
+                        if(tempOldBarcOde == txtBarCodeCrea.Text.Trim()) // To avoid duplictae bar code - call once more
+                        {
+                            AssignNewBarCodeID(nextBarCode);
+                        }
                     }
                 }
                 catch (Exception ex)
