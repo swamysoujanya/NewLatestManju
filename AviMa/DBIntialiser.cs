@@ -10,7 +10,7 @@ using System.Linq;
 using AviMa.AviMaForms;
 using AviMa.DataBaseLayer;
 using AviMa.UtilityLayer;
-
+using System.IO;
 
 namespace AviMa
 {
@@ -28,6 +28,57 @@ namespace AviMa
             {
                 labelSelectedPath.Text = folderBrowserDialog.SelectedPath;
                 buttonConnect.Enabled = true;
+
+
+                var mySQLServerWindowsServiceName = ConfigurationManager.AppSettings.Get("MySQLServerWindowsService");
+
+
+                var service = new ServiceController(mySQLServerWindowsServiceName);
+                if (service != null) //To check if service is installed
+                {
+                    ////Stop the MySQL Windows Service if it is running
+                    if (service.Status == ServiceControllerStatus.Running) //To check if the service is in 'Running' status
+                    {
+                        try
+                        {
+                            service.Stop(); //To stop the service
+                            var timeout = new TimeSpan(0, 0, 10); //5 seconds
+                            service.WaitForStatus(ServiceControllerStatus.Stopped, timeout); //To wait for service to stop
+                        }
+                        catch (InvalidOperationException ex)
+                        {
+                            txtErrorLogger.Text = ex.Message;
+                            MessageBox.Show($"{ex.Message}");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            return;
+                        }
+                    }
+                }
+
+
+
+
+
+                    //ib_logfile
+
+                    string[] files = Directory.GetFiles(labelSelectedPath.Text);
+                foreach (string file in files)
+                {
+                    string[] test = file.Split('\\');
+                    foreach (var item in test)
+                    {
+                        if(item.Contains("ib_logfile"))
+                        {
+                            File.Delete(file);
+                        }
+                    }
+                   
+                }
+
+
             }
             else
             {
@@ -65,26 +116,26 @@ namespace AviMa
                 var service = new ServiceController(mySQLServerWindowsServiceName);
                 if (service != null) //To check if service is installed
                 {
-                    ////Stop the MySQL Windows Service if it is running
-                    if (service.Status == ServiceControllerStatus.Running) //To check if the service is in 'Running' status
-                    {
-                        try
-                        {
-                            service.Stop(); //To stop the service
-                            var timeout = new TimeSpan(0, 0, 10); //5 seconds
-                            service.WaitForStatus(ServiceControllerStatus.Stopped, timeout); //To wait for service to stop
-                        }
-                        catch (InvalidOperationException ex)
-                        {
-                            txtErrorLogger.Text = ex.Message;
-                            MessageBox.Show($"{ex.Message}");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                            return;
-                        }
-                    }
+                    //////Stop the MySQL Windows Service if it is running
+                    //if (service.Status == ServiceControllerStatus.Running) //To check if the service is in 'Running' status
+                    //{
+                    //    try
+                    //    {
+                    //        service.Stop(); //To stop the service
+                    //        var timeout = new TimeSpan(0, 0, 10); //5 seconds
+                    //        service.WaitForStatus(ServiceControllerStatus.Stopped, timeout); //To wait for service to stop
+                    //    }
+                    //    catch (InvalidOperationException ex)
+                    //    {
+                    //        txtErrorLogger.Text = ex.Message;
+                    //        MessageBox.Show($"{ex.Message}");
+                    //    }
+                    //    catch (Exception ex)
+                    //    {
+                    //        MessageBox.Show(ex.Message);
+                    //        return;
+                    //    }
+                    //}
 
                     ////Include the logic to modify the (C:\ProgramData\MySQL\MySQL Server 8.0\my.ini file) to set variable datadir value
                     IniFileParser();
@@ -174,7 +225,7 @@ namespace AviMa
             {
                 txtErrorLogger.Text = ex.ToString();
                 this.Cursor = Cursors.Default;
-                txtErrorLogger.Text = "Connecting Failed...";
+              //  txtErrorLogger.Text = "Connecting Failed...";
             }
 
             this.Cursor = Cursors.Default;
